@@ -10,7 +10,7 @@ This project is directly dependent with the `lodash@4.17.14`, but its dependenci
 1. run `npm install`, this project will automatic apply patches
 1. run `npm test`, all test cases passed
 1. run `npm run reverse`, reverse all patches
-1. run `npm test`, test will be failed, because the library is broken
+1. run `npm test`, test will be failed, because the original libraries are broken
 
 ## How to patch
 
