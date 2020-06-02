@@ -2,14 +2,7 @@
 
 This is a nodejs patch fix demo project.
 
-This project is directly dependent with `lodash@4.17.14`, but its dependencies are dependent with `lodash@4.17.15`, so you must patch the lodash package in deep `node_modules`.
-
-## How to
-
-1. list all lodash dependencies (direct/in-direct)
-1. manually update source code in `node_modules` one by one
-1. run `npx patch-package {module path}` to generate patch files
-1. setup tools for the broken project, ref the [document](https://github.com/ds300/patch-package#set-up)
+This project is directly dependent with the `lodash@4.17.14`, but its dependencies are dependent with the `lodash@4.17.15`, so developers must patch the lodash package in deep `node_modules`.
 
 ## Demo
 
@@ -18,6 +11,13 @@ This project is directly dependent with `lodash@4.17.14`, but its dependencies a
 1. run `npm test`, all test cases passed
 1. run `npm run reverse`, reverse all patches
 1. run `npm test`, test will be failed, because the library is broken
+
+## How to patch
+
+1. list all `broken` dependencies (direct/in-direct) by `npm ls {name}`
+1. manually update source code in `node_modules` one by one
+1. run `npx patch-package {module path}` to generate patch files in `patches` directory
+1. setup tools for the broken project, ref the [document](https://github.com/ds300/patch-package#set-up)
 
 ## Comments
 
