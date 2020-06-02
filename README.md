@@ -21,7 +21,7 @@ This project is directly dependent with `lodash@4.17.14`, but its dependencies a
 
 ## Comments
 
-* this solution will not apply 
+* this solution will not apply any changes on `package.json` or `package-lock.json`, so, maybe your dependency check tools also will report alerts
 
 ## Lodash Dependency Tree of this Project
 
