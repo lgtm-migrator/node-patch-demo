@@ -19,6 +19,10 @@ This project is directly dependent with `lodash@4.17.14`, but its dependencies a
 1. run `npm run reverse`, reverse all patches
 1. run `npm test`, test will be failed, because the library is broken
 
+## Comments
+
+* this solution will not apply 
+
 ## Lodash Dependency Tree of this Project
 
 ```
