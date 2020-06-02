@@ -1,5 +1,5 @@
 {
-  "name": "template",
+  "name": "patch-demo",
   "version": "0.0.1",
   "main": "lib/index.js",
   "scripts": {
@@ -7,7 +7,10 @@
     "build": "tsc",
     "lint": "eslint src/** --fix",
     "release": "standard-version --no-verify && git push --follow-tags origin master",
-    "coverage": "npm test -- --coverage --no-cache"
+    "coverage": "npm test -- --coverage --no-cache",
+    "reverse": "patch-package --reverse",
+    "patch": "patch-package",
+    "postinstall": "patch-package"
   },
   "repository": {
     "type": "git",
@@ -17,7 +20,9 @@
     "node": ">10"
   },
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "lodash": "4.17.14"
+  },
   "devDependencies": {
     "@commitlint/config-conventional": "^8.3.4",
     "@types/jest": "^25.2.3",
@@ -28,6 +33,7 @@
     "eslint": "^6",
     "husky": "^4.2.3",
     "jest": "^26",
+    "patch-package": "^6.2.2",
     "standard-version": "^8",
     "ts-jest": "^26",
     "ts-node": "^8.10.2",

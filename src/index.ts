@@ -1,4 +1,6 @@
+import { first } from "lodash";
 
-export const a = 1;
+
+export const a = first("abc");
 
 
