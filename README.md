@@ -1,14 +1,23 @@
 # Node Project Manually Patch Demo
 
-This is a nodejs patch fix demo project.
+![Node CI](https://github.com/Soontao/node-patch-demo/workflows/Node%20CI/badge.svg)
+
+This is a nodejs patch fix demo project, with the [patch-package](https://github.com/ds300/patch-package) tool.
 
 This project is directly dependent with the `lodash@4.17.14`, but its dependencies are dependent with the `lodash@4.17.15`, so developers must patch the lodash package in deep `node_modules`.
 
-## Demo
+## Demo Patch
+
+> this project how to apply patches
 
 1. clone & install this project
-1. run `npm install`, this project will automatic apply patches
-1. run `npm test`, all test cases passed
+1. run `npm install`, this project will install dependencies, then apply patches automatically
+1. run `npm test`, all test cases will be passed
+
+## Re-produce vulnerability
+
+> there is a `prototype pollution` vulnerability in `lodash`
+
 1. run `npm run reverse`, reverse all patches
 1. run `npm test`, test will be failed, because the original libraries are broken
 
@@ -21,10 +30,9 @@ This project is directly dependent with the `lodash@4.17.14`, but its dependenci
 
 ## Comments
 
-* this solution will not apply any changes on `package.json` or `package-lock.json`, as a result, your dependency check tools (like `whitesource`) still will report alerts
+* this solution will not apply any changes on `package.json` or `package-lock.json` or `shrinkwrap.json`, as a result, your dependency check tools (like `whitesource`) still will report alerts
 
-## Lodash Dependency Tree of this Project
-
+## Project `Lodash` Dependencies
 ```
 $ npm ls lodash
 patch-demo@0.0.1 /Users/i337313/repos/node-patch-demo

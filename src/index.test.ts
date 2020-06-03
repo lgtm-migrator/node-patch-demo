@@ -20,7 +20,15 @@ describe('Test Suite', () => {
 
         expect(global[notExistKey]).toBeUndefined();
 
+        mZipObjectDeep([`a.b.__proto__.${notExistKey}`], [testValue]); // ref https://hackerone.com/reports/712065
+
+        expect(global[notExistKey]).toBeUndefined();
+
         rZipObjectDeep([`__proto__.${notExistKey}`], [testValue]); // try to prototype pollution by package lodash.js
+
+        expect(global[notExistKey]).toBeUndefined();
+
+        rZipObjectDeep([`a.b.__proto__.${notExistKey}`], [testValue]);
 
         expect(global[notExistKey]).toBeUndefined();
 
