@@ -31,6 +31,7 @@ This project is directly dependent with the `lodash@4.17.14`, but its dependenci
 ## Comments
 
 * this solution will not apply any changes on `package.json` or `package-lock.json` or `shrinkwrap.json`, as a result, your dependency check tools (like `whitesource`) still will report alerts
+* for the recent prototype pollution issue, developers need to fix both the `_baseSet.js` & `lodash.js (pre-built bundle)` files.
 
 ## Project `Lodash` Dependencies
 ```
